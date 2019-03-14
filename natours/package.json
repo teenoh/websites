@@ -1,0 +1,13 @@
+{
+  "name": "test_natours",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "compile:sass": "node-sass scss/main.scss css/styles.css -w"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

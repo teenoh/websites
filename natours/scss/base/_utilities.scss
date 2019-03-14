@@ -1,0 +1,43 @@
+.u-text-center {
+  text-align: center;
+}
+
+.u-mb {
+    // small
+  &-sm {
+    margin-bottom: 1.5rem;
+  }
+
+//   medium
+  &-md {
+    margin-bottom: 2rem;
+  }
+
+//   big
+  &-bg {
+    margin-bottom: 8rem;
+  }
+}
+
+
+.u-mt {
+    // small
+  &-sm {
+    margin-top: 1.5rem;
+  }
+
+//   medium
+  &-md {
+    margin-top: 2rem;
+  }
+
+//   big
+  &-bg {
+    margin-top: 8rem;
+  }
+
+  //   huge
+  &-hg {
+    margin-top: 10rem;
+  }
+}
