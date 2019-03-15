@@ -1,21 +1,21 @@
 .u-text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-mb {
     // small
   &-sm {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem !important;
   }
 
 //   medium
   &-md {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem !important;
   }
 
 //   big
   &-bg {
-    margin-bottom: 8rem;
+    margin-bottom: 8rem !important;
   }
 }
 
@@ -23,21 +23,21 @@
 .u-mt {
     // small
   &-sm {
-    margin-top: 1.5rem;
+    margin-top: 1.5rem !important;
   }
 
 //   medium
   &-md {
-    margin-top: 2rem;
+    margin-top: 4rem !important;
   }
 
 //   big
   &-bg {
-    margin-top: 8rem;
+    margin-top: 8rem !important;
   }
 
   //   huge
   &-hg {
-    margin-top: 10rem;
+    margin-top: 10rem !important;
   }
 }

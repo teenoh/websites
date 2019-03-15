@@ -313,11 +313,11 @@
         <div class="row">
           <div class="book">
             <div class="book__form">
-              <form action="#" class="form">
+              <form action="#" class="form" autocomplete="off">
                 <div class="u-text-center u-mb-md">
                   <h2 class="heading-secondary">
                     Start Booking Now
-                  </h2> 
+                  </h2>
                 </div>
                 <div class="form__group">
                   <input
@@ -338,6 +338,36 @@
                     required
                   />
                   <label for="email" class="form__label">Email</label>
+                </div>
+
+                <div class="form__group u-mb-md">
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      name="size"
+                      id="small"
+                    />
+                    <label for="small" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Small tour group</label
+                    >
+                  </div>
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      name="size"
+                      id="large"
+                    />
+                    <label for="large" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Large tour group</label
+                    >
+                  </div>
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--green">Next step &rarr;</button>
                 </div>
               </form>
             </div>
