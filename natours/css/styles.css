@@ -625,6 +625,9 @@ body {
   .popup__img {
     width: 100%;
     display: block; }
+    @media (max-width: 56.25em) {
+      .popup__img {
+        height: 50%; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;

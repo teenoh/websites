@@ -39,7 +39,13 @@
   &__img {
     width: 100%;
     display: block;
+
+    @include respond(tab-port){
+      height: 50%;
+    }
   }
+
+
 
   &__text {
     font-size: 1.4rem;
