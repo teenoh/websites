@@ -8,6 +8,10 @@
     cursor: pointer;
     transition: transform .3s;
 
+    @include respond(tab-port){
+        padding: 2rem;
+    }
+
     &:hover {
         transform: translateY(-1.5rem) scale(1.03);
         box-shadow: 0 1rem 2rem rgba($color-black, .15);
@@ -22,6 +26,11 @@
         color: transparent;
         margin-bottom: .5rem;
         display: inline-block;
+
+        @include respond(tab-port){
+        margin-bottom: 0;
+        
+    }
     }
 
 }
