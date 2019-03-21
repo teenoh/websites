@@ -14,7 +14,12 @@
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-    backface-visibility: hidden;
+
+    @supports (
+      (backface-visibility: hidden) or (-webkit-backface-visibility: hidden)
+    ) {
+      backface-visibility: hidden;
+    }
 
     &--front {
       background-color: $color-white;
@@ -180,7 +185,7 @@
     margin-bottom: 8rem;
   }
 
-  @include respond(tab-port) {
+  @media only screen and (min-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
@@ -190,7 +195,6 @@
       height: auto;
       position: relative;
       box-shadow: none;
-      
 
       &--back {
         transform: rotateY(0deg);
@@ -214,7 +218,6 @@
       transform: translate(0);
       width: 100%;
       padding: 7rem 4rem 4rem 4rem;
-
     }
 
     &__price-box {
@@ -222,7 +225,7 @@
     }
 
     &__price-only {
-      font-size: 1.4rem;  
+      font-size: 1.4rem;
     }
 
     &__price-value {

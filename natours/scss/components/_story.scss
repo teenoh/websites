@@ -29,14 +29,21 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
     // border-radius: 50%;
     // margin-right: 2rem
+
+    @supports ((clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0))) {
+      clip-path: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);
@@ -52,7 +59,7 @@
 
   &__text {
     transform: skewX(12deg);
-    
+
     @include respond(phone) {
       transform: skewX(0);
     }
