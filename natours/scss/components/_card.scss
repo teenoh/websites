@@ -185,7 +185,7 @@
     margin-bottom: 8rem;
   }
 
-  @media only screen and (min-width: 56.25em), only screen and (hover: none) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
@@ -200,36 +200,36 @@
         transform: rotateY(0deg);
         clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
       }
-    }
 
-    &__details {
-      padding: 1rem 3rem;
-    }
+      &__details {
+        padding: 1rem 3rem;
+      }
 
-    &:hover &__side--front {
-      transform: rotateY(0deg);
-    }
+      &:hover &__side--front {
+        transform: rotateY(0deg);
+      }
 
-    //   BACK SIDE STYLING
-    &__cta {
-      position: relative;
-      top: 0%;
-      left: 0;
-      transform: translate(0);
-      width: 100%;
-      padding: 7rem 4rem 4rem 4rem;
-    }
+      //   BACK SIDE STYLING
+      &__cta {
+        position: relative;
+        top: 0%;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem;
+      }
 
-    &__price-box {
-      margin-bottom: 3rem;
-    }
+      &__price-box {
+        margin-bottom: 3rem;
+      }
 
-    &__price-only {
-      font-size: 1.4rem;
-    }
+      &__price-only {
+        font-size: 1.4rem;
+      }
 
-    &__price-value {
-      font-size: 6rem;
+      &__price-value {
+        font-size: 6rem;
+      }
     }
   }
 }

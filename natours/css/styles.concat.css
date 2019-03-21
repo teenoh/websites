@@ -850,7 +850,7 @@ body {
     font-size: 6rem;
     font-weight: 100;
     margin-bottom: 8rem; }
-  @media only screen and (min-width: 56.25em), only screen and (hover: none) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
       border-radius: 3px;
@@ -863,23 +863,23 @@ body {
         .card__side--back {
           transform: rotateY(0deg);
           clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%); }
-      .card__details {
-        padding: 1rem 3rem; }
-      .card:hover .card__side--front {
-        transform: rotateY(0deg); }
-      .card__cta {
-        position: relative;
-        top: 0%;
-        left: 0;
-        transform: translate(0);
-        width: 100%;
-        padding: 7rem 4rem 4rem 4rem; }
-      .card__price-box {
-        margin-bottom: 3rem; }
-      .card__price-only {
-        font-size: 1.4rem; }
-      .card__price-value {
-        font-size: 6rem; } }
+        .card__side__details {
+          padding: 1rem 3rem; }
+        .card__side:hover .card__side__side--front {
+          transform: rotateY(0deg); }
+        .card__side__cta {
+          position: relative;
+          top: 0%;
+          left: 0;
+          transform: translate(0);
+          width: 100%;
+          padding: 7rem 4rem 4rem 4rem; }
+        .card__side__price-box {
+          margin-bottom: 3rem; }
+        .card__side__price-only {
+          font-size: 1.4rem; }
+        .card__side__price-value {
+          font-size: 6rem; } }
 
 .story {
   width: 75%;
@@ -1159,7 +1159,7 @@ body {
   background-position: center center; }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
-      background: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url("../img/hero.jpg"); } }
+      background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg"); } }
   @supports (clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
