@@ -1,0 +1,11 @@
+{
+  "name": "huddle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "node-sass": "^4.11.0",
+    "postcss-cli": "^6.1.2"
+  }
+}
