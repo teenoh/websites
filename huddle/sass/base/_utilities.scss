@@ -1,0 +1,27 @@
+.mb {
+    &-sm {
+        margin-bottom: 2rem;
+    }
+
+    &-md {
+        margin-bottom: 4rem;
+    }
+
+    &-bg {
+        margin-bottom: 6rem
+    }
+}
+
+.mt {
+    &-sm {
+        margin-top: 2rem;
+    }
+
+    &-md {
+        margin-top: 4rem;
+    }
+
+    &-bg {
+        margin-top: 6rem
+    }
+}

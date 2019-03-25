@@ -1,0 +1,19 @@
+.container {
+    margin-top: 8rem;
+    display: flex;
+
+    .illustration {
+        flex: 1.5;
+        margin-right: 2rem;
+        
+       &__img {
+           width: 100%;
+       }
+    }
+
+    .text-content {
+        flex: 1;
+        color: $color-white;
+    }
+}
+
