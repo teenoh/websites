@@ -9,9 +9,9 @@
     "watch:css": "node-sass sass/main.scss css/style.css -w",
     
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "post-css --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build": "npm-run-all compile:sass prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "devDependencies": {
     "autoprefixer": "^9.5.0",
