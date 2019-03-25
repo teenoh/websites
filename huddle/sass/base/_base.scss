@@ -17,4 +17,8 @@ body {
     background-position: center;
     height: 100vh;
     padding: 4rem;
+
+    @include respond(small){
+        padding: 3rem;
+    }
 }

@@ -1,2 +1,7 @@
 $color-primary: hsl(257, 40%, 49%);
 $color-white: #fff;
+
+$breakpoints : (
+    'small': (max-width: 375px),
+    "big": (min-width: 1440px),
+)

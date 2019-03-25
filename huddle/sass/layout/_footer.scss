@@ -1,0 +1,33 @@
+.footer {
+    .social-icons {
+        list-style-type: none; 
+        display: flex;
+        justify-content: flex-end;
+
+        @include respond(small){
+            justify-content: center;
+        }
+    }
+
+    .social-icon {
+        color: $color-white;
+        border: 1px solid $color-white;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        border-radius: 50%;
+
+        i {
+            font-size: 1.6rem;
+        }
+        
+
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+}

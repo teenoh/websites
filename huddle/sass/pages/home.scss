@@ -1,19 +1,32 @@
 .container {
-    margin-top: 8rem;
-    display: flex;
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: row;
 
-    .illustration {
-        flex: 1.5;
-        margin-right: 2rem;
-        
-       &__img {
-           width: 100%;
-       }
-    }
+  @include respond(small) {
+    flex-direction: column;
+  }
 
-    .text-content {
-        flex: 1;
-        color: $color-white;
+  .illustration {
+    flex: 1.5;
+    margin-right: 2rem;
+
+    &__img {
+      width: 100%;
     }
+  }
+
+  .text-content {
+    flex: 1;
+    color: $color-white;
+
+    @include respond(small) {
+      text-align: center;
+
+      .register-btn{
+        width: 80%;
+      }
+
+    }
+  }
 }
-
