@@ -196,7 +196,7 @@
 
     @media only screen and (max-width: $bp-small) {
       flex-direction: column;
-      padding: 1.5rem .5rem;
+      padding: 1.5rem 0.5rem;
     }
   }
 
@@ -208,7 +208,7 @@
 
     @media only screen and (max-width: $bp-small) {
       margin-right: 0;
-      margin-bottom: .7rem;
+      margin-bottom: 0.7rem;
       width: 1.5rem;
       height: 1.5rem;
     }
@@ -245,8 +245,7 @@
 .overview {
   display: flex;
   align-items: center;
-  
-  
+
   &__heading {
     border-bottom: 1px solid var(--color-grey-light-2);
     font-size: 2.25rem;
@@ -279,7 +278,7 @@
 
     @media only screen and (max-width: $bp-smallest) {
       width: 1.25rem;
-      height: 1.25rem
+      height: 1.25rem;
     }
   }
 
@@ -309,7 +308,7 @@
     }
 
     @media only screen and (max-width: $bp-smallest) {
-      padding: 0rem  1.25rem;
+      padding: 0rem 1.25rem;
       margin-left: 1.5rem;
     }
   }
@@ -331,14 +330,13 @@
   &__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase;
-    
 
     @media only screen and (max-width: $bp-small) {
-      font-size: .5rem;
+      font-size: 0.5rem;
     }
 
     @media only screen and (max-width: $bp-smallest) {
-      font-size: .3rem;
+      font-size: 0.3rem;
     }
   }
 }
@@ -425,15 +423,18 @@
     margin-right: 0.7rem;
 
     // Older browsers
-    // background-image: url('../img/chevron-thin-right.svg');
-    // background-size: cover;
+    background-image: url('../img/chevron-thin-right.svg');
+    background-size: cover;
 
-    // Newer browsers - masks
-    background-color: var(--color-primary);
-    -webkit-mask-image: url("../img/chevron-thin-right.svg");
-    -webkit-mask-size: cover;
-    mask-image: url("../img/chevron-thin-right.svg");
-    mask-size: cover;
+    @supports ((-webkit-mask-image: url()) or (mask-image: url())) {
+      // Newer browsers - masks
+      background-color: var(--color-primary);
+      -webkit-mask-image: url("../img/chevron-thin-right.svg");
+      -webkit-mask-size: cover;
+      mask-image: url("../img/chevron-thin-right.svg");
+      mask-size: cover;
+      background-image: none;
+    }
   }
 }
 
