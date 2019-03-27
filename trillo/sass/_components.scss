@@ -13,6 +13,12 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -126,11 +132,25 @@
   list-style-type: none;
   margin-top: 3.5rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
     }
   }
 
@@ -163,12 +183,21 @@
     color: var(--color-grey-light-1);
     text-decoration: none;
     text-transform: uppercase;
-    display: block;
     padding: 1.5rem 3rem;
     position: relative;
     z-index: 10;
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      padding: 1.5rem .5rem;
+    }
   }
 
   &__icon {
@@ -176,6 +205,13 @@
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: .7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 }
 
@@ -186,6 +222,10 @@
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light-4);
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 /////////////////////////////////
@@ -205,7 +245,8 @@
 .overview {
   display: flex;
   align-items: center;
-
+  
+  
   &__heading {
     border-bottom: 1px solid var(--color-grey-light-2);
     font-size: 2.25rem;
@@ -213,6 +254,16 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.5rem;
+      padding: 1.25rem;
+    }
   }
 
   &__stars {
@@ -225,6 +276,11 @@
     width: 1.7rem;
     height: 1.75rem;
     fill: var(--color-primary);
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 1.25rem;
+      height: 1.25rem
+    }
   }
 
   &__location {
@@ -247,17 +303,43 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0rem 1.5rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0rem  1.25rem;
+      margin-left: 1.5rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -0 0.3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.4rem;
+    }
   }
 
   &__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase;
+    
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: .5rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: .3rem;
+    }
   }
 }
 
@@ -370,6 +452,7 @@
   }
 
   &__friends {
+    display: flex;
   }
 
   &__photo {
@@ -380,7 +463,7 @@
     border: 2px solid var(--color-white);
 
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
   }
 }
@@ -395,6 +478,11 @@
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
 
   &__text {
     z-index: 2;
@@ -456,6 +544,10 @@
   padding: 3.5rem;
   text-align: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
+
   &__book-now {
     text-transform: uppercase;
     font-size: 2rem;
@@ -500,10 +592,10 @@
 
   &:hover {
     background-image: linear-gradient(
-    to left,
-    var(--color-primary-light),
-    var(--color-primary-dark)
-  );
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
   }
 
   &:hover & {
