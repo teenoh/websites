@@ -1,0 +1,28 @@
+.features {
+    // background-color: $color-grey-light-2;
+    grid-column: center-start / center-end; 
+
+    margin: 15rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 6rem;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    // grid-template-rows: repeat(2, min-content);
+    grid-gap: .8rem;
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2;
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
+}
