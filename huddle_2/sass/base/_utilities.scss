@@ -1,0 +1,27 @@
+.mb {
+    &-sm {
+        margin-bottom: 2rem !important;
+    }
+
+    &-md {
+        margin-bottom: 4rem !important;
+    }
+
+    &-bg {
+        margin-bottom: 6rem !important
+    }
+}
+
+.mt {
+    &-sm {
+        margin-top: 2rem !important;
+    }
+
+    &-md {
+        margin-top: 4rem !important;
+    }
+
+    &-bg {
+        margin-top: 6rem !important
+    }
+}

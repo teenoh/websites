@@ -1,0 +1,133 @@
+.footer {
+  background-color: $color-dark;
+  color: $color-white;
+
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: auto auto;
+    padding: 10rem 8rem;
+    margin-bottom: 10rem;
+
+    @include respond(small) {
+      padding: 6rem 3rem;
+    }
+  }
+
+  &__description {
+    .footer__logo {
+      width: 20rem;
+      margin-bottom: 3.2rem;
+    }
+    .paragraph {
+      font-size: 1.2rem;
+      width: 70%;
+      margin-bottom: 1.2rem;
+    }
+
+    .social-icons {
+      list-style-type: none;
+      display: flex;
+
+      .social-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: 1.6rem;
+      }
+    }
+
+    & ~ * {
+      margin-top: 4rem;
+    }
+  }
+
+  &__links {
+    list-style-type: none;
+    display: grid;
+
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: repeat(2, 1fr);
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  &__subscription {
+    // justify-self: stretch;
+
+    @include respond(small) {
+      order: -1;
+      margin-bottom: 8rem;
+    }
+
+    label {
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 1.4rem;
+    }
+
+    .form-input {
+      display: flex;
+      // border: 3px solid red;
+      width: 80%;
+
+      @include respond(small) {
+        width: 100%;
+      }
+
+      input {
+        border: none;
+        border-radius: 3px;
+        flex: 1;
+        padding: 1.4rem 0.8rem;
+        height: 3rem;
+      }
+
+      button {
+        background-color: $color-primary;
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -4rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        @include respond(small) {
+          margin-left: -3rem;
+        }
+
+        img {
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+      }
+    }
+  }
+
+  &__end {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    position: relative;
+
+    p {
+      text-align: center;
+      padding-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}

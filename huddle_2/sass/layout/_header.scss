@@ -1,0 +1,22 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+  align-items: center;
+  padding: 3.2rem;
+
+  &__logo {
+    height: 3rem;
+
+    @include respond(small) {
+      height: 2.2rem;
+    }
+  }
+
+  &__btn {
+    justify-self: end;
+    color: $color-primary;
+    border: 1px solid currentColor;
+    background-color: $color-white;
+  }
+}

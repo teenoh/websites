@@ -1,0 +1,58 @@
+body {
+    font-family: $fontBody;
+    font-weight: $font-lighter;
+    font-size: 1.6rem;
+
+    @include respond(small){
+        font-size: 1.4rem;
+    }
+}
+
+%heading {
+    font-family: $fontHeadings;
+    font-weight: $font-bold;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 3.5rem;
+
+    @include respond(small){
+        font-size: 2.2rem;
+    }
+}
+
+
+.heading-2 {
+    @extend %heading;
+    font-size: 2.8rem;
+
+    @include respond(small){
+        font-size: 2rem;
+    }
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 2.2rem;
+
+    @include respond(small){
+        font-size: 1.8rem;
+    }
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: 1.8rem;
+
+    @include respond(small){
+        font-size: 1.6rem;
+    }
+}
+
+.paragraph {
+    font-family: $fontBody;
+    font-weight: $font-lighter
+
+
+}

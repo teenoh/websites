@@ -1,0 +1,20 @@
+$color-primary: hsl(322, 100%, 66%);
+$color-dark: hsl(192, 100%, 9%);
+$color-neutral-dark: hsl(192, 100%, 9%);
+$color-neutral-light: hsl(208, 11%, 55%);
+$color-white: #fff;
+
+$breakpoints: (
+    'small': max-width(23.4375em), //375px
+    'large': min-width(75em) // 1200px
+);
+
+$bp-small: 23.4375em;
+$bp-large: 75em;
+
+$fontBody: 'Open Sans';
+$fontHeadings: 'Poppins';
+
+$font-light: 400;
+$font-lighter: 300;
+$font-bold: 700;

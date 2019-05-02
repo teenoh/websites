@@ -1,0 +1,16 @@
+// responsive breakpoint manager
+
+@mixin respond($breakpoint){
+    
+    @if $breakpoint == small {
+        @media only screen and (max-width: 23.438em){
+            @content;
+        }
+    }
+
+    @if $breakpoint == big {
+        @media only screen and (max-width: 90rem){
+            @content;
+        }
+    }
+}
