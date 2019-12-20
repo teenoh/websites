@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$bg-color: hsl(204, 43%, 93%);
+$primary-color: hsl(179, 62%, 43%);
+$primary-color-light: hsl(179, 47%, 52%); //fix this with the right color
+$secondary-color: hsl(71, 73%, 54%);
+
+$white-color: #fff;
+$text-light: hsl(204, 43%, 93%);
+$text-dark: hsl(218, 22%, 67%);
+
+$bp-sm: 375px;
+$bp-md: 600px;
+$bp-lg: 1440px;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
+  background-color: $bg-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 85%;
+  background-color: $white-color;
+  margin: 6rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.1);
+
+  @media screen and (min-width: 600px) {
+    width: 70%;
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "intro intro"
+      "subscription why-us";
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 50%;
+  }
+}
+
+.intro,
+.subscription,
+.why-us {
+  padding: 2.5rem;
+
+  @media screen and (min-width: 600px) {
+    padding: 3.5rem;
+  }
+}
+
+.intro {
+  grid-area: intro;
+
+  &__title {
+    color: $primary-color;
+    margin-bottom: 2rem;
+  }
+
+  &__subtitle {
+    font-size: 1.8rem;
+    color: $secondary-color;
+    margin-bottom: 1.6rem;
+  }
+
+  &__desc {
+    color: $text-dark;
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+}
+
+.subscription {
+  background-color: $primary-color;
+  color: $white-color;
+  grid-area: subscription;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__pricing {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+
+    .amount {
+      margin-right: 0.8rem;
+      font-size: 3rem;
+    }
+
+    .period {
+      font-weight: 300;
+      color: rgba($white-color, 0.5);
+      font-size: 1.6rem;
+    }
+  }
+
+  &__desc {
+    color: rgba($white-color, 0.7);
+    margin-bottom: 3rem;
+  }
+
+  &__cta {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: $secondary-color;
+    color: $white-color;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.1);
+
+    &:link,
+    &:visited,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}
+
+.why-us {
+  color: $white-color;
+  background-color: $primary-color-light;
+  grid-area: why-us;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__reasons {
+    list-style-type: none;
+  }
+
+  &__reasons li {
+    color: rgba($white-color, 0.5);
+    margin-bottom: 0.4rem;
+  }
+}
+
+.footer {
+  margin-bottom: 1rem;
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+}

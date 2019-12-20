@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
+  background-color: #e5eff5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+.container {
+  width: 85%;
+  background-color: #fff;
+  margin: 6rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.1); }
+  @media screen and (min-width: 600px) {
+    .container {
+      width: 70%;
+      margin-top: 8rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "intro intro" "subscription why-us"; } }
+  @media screen and (min-width: 1200px) {
+    .container {
+      width: 50%; } }
+
+.intro,
+.subscription,
+.why-us {
+  padding: 2.5rem; }
+  @media screen and (min-width: 600px) {
+    .intro,
+    .subscription,
+    .why-us {
+      padding: 3.5rem; } }
+
+.intro {
+  grid-area: intro; }
+  .intro__title {
+    color: #2ab2af;
+    margin-bottom: 2rem; }
+  .intro__subtitle {
+    font-size: 1.8rem;
+    color: #c0df34;
+    margin-bottom: 1.6rem; }
+  .intro__desc {
+    color: #98a6bd;
+    font-size: 1.6rem;
+    line-height: 1.8; }
+
+.subscription {
+  background-color: #2ab2af;
+  color: #fff;
+  grid-area: subscription; }
+  .subscription__title {
+    margin-bottom: 2rem; }
+  .subscription__pricing {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center; }
+    .subscription__pricing .amount {
+      margin-right: 0.8rem;
+      font-size: 3rem; }
+    .subscription__pricing .period {
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 1.6rem; }
+  .subscription__desc {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 3rem; }
+  .subscription__cta {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: #c0df34;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.1); }
+    .subscription__cta:link, .subscription__cta:visited, .subscription__cta:active {
+      text-decoration: none; }
+
+.why-us {
+  color: #fff;
+  background-color: #4bbebc;
+  grid-area: why-us; }
+  .why-us__title {
+    margin-bottom: 2rem; }
+  .why-us__reasons {
+    list-style-type: none; }
+  .why-us__reasons li {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.4rem; }
+
+.footer {
+  margin-bottom: 1rem; }
+  .footer .attribution {
+    font-size: 11px;
+    text-align: center; }
+  .footer .attribution a {
+    color: #3e52a3; }
