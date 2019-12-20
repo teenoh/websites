@@ -5,10 +5,8 @@
   "license": "MIT",
   "scripts": {
     "watch:sass": "node-sass scss/main.scss css/styles.css -w",
-
     "devserver": "live-server",
     "dev": "npm-run-all --parallel devserver watch:sass",
-    
     "compile:sass": "node-sass scss/main.scss css/styles.comp.css",
     "concat:css": "concat -o css/styles.concat.css css/icon-font.css css/styles.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/styles.concat.css -o css/styles.prefix.css",
