@@ -30,31 +30,106 @@ body {
   background-color: $bg-color;
 }
 
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  background-color: $primary-color;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.btn:active,
+.btn:visited {
+  text-decoration: none;
+}
+
+.btn--secondary {
+  background-color: $secondary-color;
+}
+
 .header {
   padding: 3rem 2.4rem 0 2.4rem;
   margin-bottom: 8rem;
 
-  nav {
+  @media screen and (min-width: $bp-md) {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__nav {
     display: flex;
     justify-content: space-between;
     align-content: center;
     margin-bottom: 4rem;
 
-    img:nth-of-type(1) {
-      height: 2.5rem;
-      width: auto;
+    @media screen and (min-width: $bp-md) {
+      margin-bottom: 8rem;
     }
 
-    img:nth-of-type(2) {
-      width: 1.6rem;
-      height: 1.6rem;
+    &-links {
+      display: none;
+
+      @media screen and (min-width: $bp-md) {
+        display: flex;
+        align-items: center;
+
+        & a:not(:last-of-type) {
+          margin-right: 2rem;
+          font-size: 1.5rem;
+          color: $text-light;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    height: 2.5rem;
+    width: auto;
+
+    @media screen and (min-width: $bp-md) {
+      // height: 3rem;
+    }
+  }
+
+  &__menu-icon {
+    height: 2rem;
+    width: auto;
+
+    @media screen and (min-width: $bp-md) {
+      display: none;
     }
   }
 
   .hero {
+    position: relative;
+
+    @media screen and (min-width: $bp-md) {
+      display: flex;
+      min-height: 40vh;
+      align-items: center;
+    }
+
     &__img {
       position: relative;
       margin-bottom: 4rem;
+
+      @media screen and (min-width: $bp-md) {
+        position: absolute;
+        right: -10%;
+        width: 50%;
+        margin-bottom: 0;
+      }
 
       img {
         width: 100%;
@@ -72,26 +147,48 @@ body {
         border-top-left-radius: 50%;
         border-bottom-left-radius: 50%;
         z-index: -1;
+
+        @media screen and (min-width: $bp-md) {
+          right: -10rem;
+        }
       }
     }
 
     &-content {
+      flex-basis: 50%;
+      text-align: center;
+
+      @media screen and (min-width: $bp-md) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 40%;
+        text-align: left;
+      }
+
       &__title {
         font-size: 2.6rem;
-        font-weight: bold;
-        text-align: center;
+        font-weight: 400;
         margin-bottom: 2rem;
+
+        @media screen and (min-width: $bp-md) {
+          font-size: 4.5rem;
+        }
       }
+
 
       &__subtitle {
         font-size: 1.8rem;
         color: $text-light;
-        text-align: center;
         margin-bottom: 2rem;
       }
 
       &__cta {
         display: flex;
+        justify-content: center;
+
+        @media screen and (min-width: $bp-md) {
+          justify-content: flex-start;
+        }
 
         button {
           padding: 1rem 2rem;
@@ -104,6 +201,12 @@ body {
         button:first-of-type {
           margin-right: 0.5rem;
         }
+
+        button:nth-of-type(2) {
+          color: $text-dark;
+          font-weight: 600;
+          background-color: $white-color;
+        }
       }
     }
   }
@@ -112,6 +215,13 @@ body {
 .features {
   padding: 0 2.4rem;
   margin-bottom: 8rem;
+
+  @media screen and (min-width: $bp-md) {
+    padding: 8rem 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   &__title {
     font-size: 2.2rem;
@@ -124,15 +234,30 @@ body {
     color: $text-light;
     text-align: center;
     margin-bottom: 2rem;
+
+    @media screen and (min-width: $bp-md) {
+      width: 40%;
+      margin: 0 auto 2rem auto;
+    }
   }
 
   &__tabs {
     margin-bottom: 3rem;
+
+    @media screen and (min-width: $bp-md) {
+      width: 80%;
+      margin: 0 auto 3rem auto;
+      display: flex;
+    }
   }
 
   &__tab {
     text-align: center;
     border-bottom: 1px solid $text-light;
+
+    @media screen and (min-width: $bp-md) {
+      flex: 1;
+    }
 
     a {
       display: inline-block;
@@ -152,15 +277,29 @@ body {
     }
 
     &-details {
+      min-height: 30vh;
       display: none;
+      position: relative;
 
       &--active {
         display: block;
+
+        @media screen and (min-width: $bp-md) {
+          display: flex;
+          align-items: center;
+        }
       }
 
       .img-content {
-        position: relative;
         margin-bottom: 2.5rem;
+
+        @media screen and (min-width: $bp-md) {
+          position: absolute;
+          margin-bottom: 0;
+          left: 0;
+          width: 50%;
+
+        }
 
         img {
           width: 100%;
@@ -178,20 +317,30 @@ body {
           border-top-right-radius: 50%;
           border-bottom-right-radius: 50%;
           z-index: -1;
+
+          @media screen and (min-width: $bp-md) {
+            left: -20rem;
+          }
         }
       }
 
       .text-content {
+        text-align: center;
+
+        @media screen and (min-width: $bp-md) {
+          text-align: left;
+          width: 40%;
+          margin-left: auto;
+        }
+
         .title {
           font-size: 2.2rem;
           margin-bottom: 1rem;
-          text-align: center;
         }
 
         .description {
           font-size: 1.8rem;
           color: $text-light;
-          text-align: center;
           margin-bottom: 2rem;
         }
 
@@ -220,21 +369,42 @@ body {
 .download {
   padding: 0 2.4rem;
   margin-bottom: 8rem;
+  text-align: center;
+
+  @media screen and (min-width: $bp-md) {
+    width: 80%;
+    margin: 0 auto 8rem auto;
+    padding: 8rem 0;
+  }
 
   &__title {
     font-size: 2.2rem;
     margin-bottom: 1rem;
-    text-align: center;
+
+    @media screen and (min-width: $bp-md) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__description {
     font-size: 1.8rem;
     color: $text-light;
-    text-align: center;
     margin-bottom: 2rem;
+
+    @media screen and (min-width: $bp-md) {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 6rem;
+    }
   }
 
   .browser-group {
+    @media screen and (min-width: $bp-md) {
+      display: flex;
+      justify-content: center;
+    }
+
     .card {
       display: inline-block;
       background-color: white;
@@ -249,6 +419,24 @@ body {
       margin-right: auto;
       border-radius: 12px;
       box-shadow: 0px 7px 9px 0px hsla(231, 69%, 60%, 0.2);
+
+      @media screen and (min-width: $bp-md) {
+        margin: 0;
+        margin-right: 3rem;
+        align-self: start;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        &:nth-of-type(2) {
+          margin-top: 4rem;
+        }
+
+        &:nth-of-type(3) {
+          margin-top: 8rem;
+        }
+      }
 
       &__logo {
         display: inline-block;
@@ -292,17 +480,29 @@ body {
   text-align: center;
   margin-bottom: 8rem;
 
+  @media screen and (min-width: $bp-md) {
+    width: 80%;
+    max-width: 50rem;
+    margin: 0 auto 8rem auto;
+    padding: 8rem 0;
+  }
+
   &__title {
     font-size: 2.2rem;
     margin-bottom: 1rem;
-    text-align: center;
+
+    @media screen and (min-width: $bp-md) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__subtitle {
     font-size: 1.8rem;
     color: $text-light;
-    text-align: center;
     margin-bottom: 2rem;
+    @media screen and (min-width: $bp-md) {
+      margin-bottom: 4rem;
+    }
   }
 
   .accordion {
@@ -348,12 +548,20 @@ body {
 
 .subscribe {
   background-color: $primary-color;
-  padding: 4rem 2.4rem;
+  padding: 8rem 2.4rem;
   text-align: center;
+
+  &__content {
+    @media screen and (min-width: $bp-md) {
+      width: 80%;
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+  }
 
   &__title {
     font-size: 2.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     text-align: center;
     color: white;
     font-weight: bold;
@@ -364,7 +572,7 @@ body {
     letter-spacing: 2px;
     color: white;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .form-group {
@@ -397,14 +605,30 @@ body {
 .footer {
   background-color: $footer-color;
   padding: 4rem 2.4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+  @media screen and (min-width: $bp-md) {
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $bp-md) {
+      flex-direction: row;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 
   &__logo {
     margin-bottom: 1.5rem;
 
-    fill: white;
+    @media screen and (min-width: $bp-md) {
+      margin-bottom: 0;
+      margin-right: 1.5rem;
+    }
   }
 
   .nav-links {
@@ -413,9 +637,18 @@ body {
     list-style-type: none;
     margin-bottom: 1rem;
 
+    @media screen and (min-width: $bp-md) {
+      display: flex;
+      margin-bottom: 0;
+      margin-right: auto;
+    }
 
     li {
       margin-bottom: 1rem;
+
+      @media screen and (min-width: $bp-md) {
+        margin-bottom: 0;
+      }
 
       a {
         display: inline-block;

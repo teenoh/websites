@@ -11,7 +11,10 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Frontend Mentor | Bookmark landing page</title>
 
@@ -28,9 +31,15 @@
   </head>
   <body>
     <header class="header">
-      <nav>
-        <img src="./images/logo-bookmark.svg" alt="" />
-        <img src="images/icon-hamburger.svg" />
+      <nav class="header__nav">
+        <img class="header__logo" src="./images/logo-bookmark.svg" alt="" />
+        <img class="header__menu-icon" src="images/icon-hamburger.svg" />
+        <div class="header__nav-links">
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Contact</a>
+          <a class="btn btn--secondary" href="#">Login</a>
+        </div>
       </nav>
       <div class="hero">
         <div class="hero__img">
@@ -74,7 +83,9 @@
           <a href="">Easy Sharing</a>
         </div>
       </div>
-      <div class="features__tab-details features__tab-details--1 features__tab-details--active">
+      <div
+        class="features__tab-details features__tab-details--1 features__tab-details--active"
+      >
         <div class="img-content">
           <img src="images/illustration-hero.svg" alt="" />
         </div>
@@ -164,7 +175,7 @@
         <div class="accordion-item">
           <div class="accordion-item__header">
             <h4 class="title">What is Bookmark?</h4>
-            <img src="images/icon-arrow.svg" alt="">
+            <img src="images/icon-arrow.svg" alt="" />
           </div>
           <div class="accordion-item__body">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
@@ -175,7 +186,7 @@
         <div class="accordion-item">
           <div class="accordion-item__header">
             <h4 class="title">How can I request a new browser?</h4>
-            <img src="images/icon-arrow.svg" alt="">
+            <img src="images/icon-arrow.svg" alt="" />
           </div>
           <div class="accordion-item__body">
             Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
@@ -189,7 +200,7 @@
         <div class="accordion-item">
           <div class="accordion-item__header">
             <h4 class="title">Is there a mobile app?</h4>
-            <img class="arrow" src="images/icon-arrow.svg" alt="">
+            <img class="arrow" src="images/icon-arrow.svg" alt="" />
           </div>
           <div class="accordion-item__body">
             Sed consectetur quam id neque fermentum accumsan. Praesent luctus
@@ -201,7 +212,7 @@
         <div class="accordion-item">
           <div class="accordion-item__header">
             <h4 class="title">What about other Chromium browsers?</h4>
-            <img src="images/icon-arrow.svg" alt="">
+            <img src="images/icon-arrow.svg" alt="" />
           </div>
           <div class="accordion-item__body">
             Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
@@ -212,7 +223,7 @@
         <div class="accordion-item">
           <div class="accordion-item__header">
             <h4 class="title">What about other Chromium browsers?</h4>
-            <img src="images/icon-arrow.svg" alt="">
+            <img src="images/icon-arrow.svg" alt="" />
           </div>
           <div class="accordion-item__body">
             Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
@@ -226,35 +237,38 @@
     </section>
 
     <section class="subscribe">
-      <p class="subscribe__subtitle">35,000+ Already Joined</p>
-      <h4 class="subscribe__title">Stay up-to-date with what we are doing</h4>
-      <form action="" class="form-group">
-        <input type="email" placeholder="Enter email address" />
-        <button>Contact us</button>
-      </form>
+      <div class="subscribe__content">
+        <p class="subscribe__subtitle">35,000+ Already Joined</p>
+        <h4 class="subscribe__title">Stay up-to-date with what we are doing</h4>
+        <form action="" class="form-group">
+          <input type="email" placeholder="Enter email address" />
+          <button>Contact us</button>
+        </form>
+      </div>
     </section>
 
     <footer class="footer">
-      <!-- make logo white -->
-      <img src="images/logo-bookmark.svg" alt="" class="footer__logo" />
-      <ul class="nav-links">
-        <li><a href="">Features</a></li>
-        <li><a href="">Pricing</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-      <div class="social-links">
-        <img src="images/icon-facebook.svg" alt="" />
-        <img src="images/icon-twitter.svg" alt="" />
+      <div class="footer__content">
+        <img src="images/logo-bookmark-white.svg" alt="" class="footer__logo" />
+        <ul class="nav-links">
+          <li><a href="">Features</a></li>
+          <li><a href="">Pricing</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <div class="social-links">
+          <img src="images/icon-facebook.svg" alt="" />
+          <img src="images/icon-twitter.svg" alt="" />
+        </div>
       </div>
     </footer>
 
-    <footer>
+    <!-- <footer>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">teenoh</a>.
       </p>
-    </footer>
+    </footer> -->
   </body>
 </html>
